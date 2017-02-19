@@ -16,4 +16,5 @@ To do:
 - Use Matt's icons for buttons along the bottom.
 - Put 'Good Beers' in title bar instead of 'Beer'.
 - Incorporate internationalization to show how easily JET supports that.
+- Incorporate theming to show how easily JET supports that.
 - Incorporate TypeScript, as in Matt's code.
