@@ -18,7 +18,7 @@
       </div>
       <div id="pageContent" class="oj-web-applayout-page">
         <header role="banner" class="oj-web-applayout-header">
-            <div class=" oj-flex-bar oj-sm-align-items-center">
+            <div class="oj-flex-bar">
                 <div class="oj-flex-bar-start oj-md-hide">
                     <button class="oj-button-lg" data-bind="click: toggleDrawer,
                 ojComponent: {component:'ojButton', label: 'Application Navigation',
@@ -27,6 +27,23 @@
                 </div>
                 <div>
                     <h2 data-bind="text: router.stateId().charAt(0).toUpperCase()+router.stateId().slice(1)"></h2>
+                </div>
+                <div id="myToolbar" aria-label="Editing Toolbar" aria-controls="controlled"
+                    class="oj-flex-bar-end"
+                    data-bind="visible: router.stateId()=='beer', 
+                               ojComponent: {component:'ojToolbar'}">
+                    <button id="add"
+                            data-bind="ojComponent: {
+                                component:'ojButton', label: 'Add', display: 'icons', 
+                                icons: {start:'demo-icon-font demo-chat-icon-24'}
+                            }">
+                    </button>
+                    <button id="change"
+                            data-bind="ojComponent: {
+                                component:'ojButton', label: 'Change', display: 'icons', 
+                                icons: {start:'demo-icon-font demo-palette-icon-24'}
+                            }">
+                    </button>
                 </div>
             </div>
         </header>
