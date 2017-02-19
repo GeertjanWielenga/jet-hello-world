@@ -9,6 +9,8 @@ The backend is the Spring Boot server created by Matt above.
 On the left is Matt's app, on the right is mine:
 <p><img src="src/assets/imgs/pic-1.png"/></p>
 <p><img src="src/assets/imgs/pic-2.png"/></p>
+<p>Here's the structure of the app:</p>
+<p><img src="src/assets/imgs/pic-3.png"/></p>
 
 To do:
 - Functionality for adding new beers, with button in toolbar.
