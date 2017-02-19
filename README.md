@@ -12,3 +12,4 @@ On the left is Matt's app, on the right is mine:
 
 To do:
 - Functionality for adding new beers, with button in toolbar.
+- Functionality for updating the name of an existing beer.
