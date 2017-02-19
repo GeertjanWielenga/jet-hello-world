@@ -34,9 +34,9 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
       // Navigation setup
       var navData = [
       {name: 'Home', id: 'home',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 fa fa-home fa-lg'},
       {name: 'Beer', id: 'beer',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 fa fa-beer fa-lg'},
       {name: 'Contact', id: 'contact',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
       {name: 'About', id: 'about',
