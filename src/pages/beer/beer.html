@@ -1,0 +1,41 @@
+<div class="oj-hybrid-padding">
+    <ul data-bind="ojComponent: {
+                   component: 'ojListView',
+                      data: dataSource,
+                      optionChange: optionChangeListener,
+                      item: {template: 'employee_template'},
+                      selectionMode: 'single'}">
+    </ul>
+    <script type="text/html" id="employee_template">
+        <li>
+            <img data-bind="attr:{src: image}" style="float:left;border-radius: 50%;padding-right: 5px" width="48px" height="48px" />  
+            <h3 data-bind="text: name"></h3>
+        </li>
+    </script>
+</div>
+<div id="dialogWrapper">
+    <div style="display:none"
+         id="confirmDialog"
+         title="Beer Details"
+         data-bind="ojComponent:{
+             component: 'ojDialog',
+             initialVisibility: 'hide'}">
+        <div class="oj-dialog-body">
+            <div class="oj-panel">
+                <p>
+                    <input class="oj-inputtext" data-bind="value: selectedItem" style="border: 0px solid; background-color: transparent;"/>
+                </p>
+                <img data-bind="attr:{src: selectedImage}" style="float:left;border-radius: 100%;padding-right: 5px" width="200px" height="200px" />  
+
+                <hr/>
+            </div>
+        </div>
+        <div class="oj-dialog-footer">
+            <button class="oj-button-primary"
+                    data-bind="click: confirm,
+                               ojComponent: {component: 'ojButton',
+                                             label: 'Confirm'}">
+            </button>
+        </div>
+    </div>
+</div>
