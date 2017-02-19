@@ -15,4 +15,4 @@ To do:
 - Functionality for updating the name of an existing beer.
 - Use Matt's icons for buttons along the bottom.
 - Put 'Good Beers' in title bar instead of 'Beer'.
-- Incorporate internationalization to show how JET supports that.
+- Incorporate internationalization to show how easily JET supports that.
