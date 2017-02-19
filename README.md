@@ -19,4 +19,5 @@ To do:
 - Put 'Good Beers' in title bar instead of 'Beer'.
 - Incorporate internationalization to show how easily JET supports that.
 - Incorporate theming to show how easily JET supports that.
+- Incorporate web components (i.e., CCA components) to show how easily JET supports that.
 - Incorporate TypeScript, as in Matt's code.
