@@ -16,6 +16,7 @@ To do:
 - <strike>Functionality for adding new beers, with button in toolbar.</strike>
 - <strike>Functionality for deleting beers, with button in toolbar.</strike>
 - Functionality for updating the name of an existing beer.
+- Functionality for dragging/dropping beers in list.
 - <strike>Use Matt's icons for buttons along the bottom. (Using FontAwesome instead.)</strike>
 - Put 'Good Beers' in title bar instead of 'Beer'.
 - Incorporate validation to show how easily JET supports that.
