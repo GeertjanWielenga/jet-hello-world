@@ -13,7 +13,7 @@ On the left is Matt's app, on the right is mine:
 <p><img src="src/assets/imgs/pic-3.png"/></p>
 
 To do:
-- Functionality for adding new beers, with button in toolbar.
+- <strike>Functionality for adding new beers, with button in toolbar.</strike>
 - Functionality for updating the name of an existing beer.
 - Use Matt's icons for buttons along the bottom.
 - Put 'Good Beers' in title bar instead of 'Beer'.
