@@ -1,4 +1,12 @@
 <div class="oj-hybrid-padding">
+    <div class="oj-flex-bar-end"
+         data-bind="ojComponent: {component:'ojToolbar'}">
+        <button data-bind="ojComponent: {
+                  component:'ojButton', label: 'Add', display: 'icons', 
+                  icons: {start:'demo-icon-font fa fa-plus fa-lg'}
+                }">
+        </button>
+    </div>
     <ul data-bind="ojComponent: {
                    component: 'ojListView',
                       data: dataSource,

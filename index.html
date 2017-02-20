@@ -29,15 +29,6 @@
                 <div>
                     <h2 data-bind="text: router.stateId().charAt(0).toUpperCase()+router.stateId().slice(1)"></h2>
                 </div>
-                <div class="oj-flex-bar-end"
-                     data-bind="visible: router.stateId()=='beer', 
-                                ojComponent: {component:'ojToolbar'}">
-                    <button data-bind="ojComponent: {
-                                component:'ojButton', label: 'Add', display: 'icons', 
-                                icons: {start:'demo-icon-font fa fa-plus fa-lg'}
-                            }">
-                    </button>
-                </div>
             </div>
         </header>
         <div role="main" class="oj-panel oj-web-applayout-content" data-bind="ojModule: router.moduleConfig">
