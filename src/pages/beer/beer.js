@@ -8,6 +8,7 @@ define([
 		  function mainContentViewModel() {
 			var self = this;
 			self.newBeerItem = ko.observable();
+			self.newBeerImage = ko.observable();
 			self.selectedItem = ko.observable(-1);
 			self.selectedImage = ko.observable();
 			self.beerCollection = beerservice.createBeerCollection();
@@ -33,10 +34,22 @@ define([
    			  $("#confirmDialog").ojDialog("open");
 			};
 			self.saveNewBeer = function () {
+			  var name = self.newBeerItem();
+			  var url = "http://api.giphy.com/v1/gifs/search?q=" + name + "&api_key=dc6zaTOxFJmzC";
+			  var xhr = new XMLHttpRequest();
+			  xhr.onload = function () {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+				  var response = JSON.parse(xhr.responseText);
+				  var data = response.data;
+				  self.newBeerImage(data[0].images.downsized.url);
+				}
+			  };
+			  xhr.open('GET', url, false);
+			  xhr.send();
 			  self.beerCollection.add(
 					  {
-						name:'new beer ' + Math.random(),
-						image:'src/css/images/avatar_24px.png'
+						name: self.newBeerItem(),
+						image: self.newBeerImage()
 					  }, 
 					  { 
 						at:0
