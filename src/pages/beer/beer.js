@@ -27,6 +27,9 @@ define([
 			self.createNewBeer = function (event, ui) {
 				$("#createDialog").ojDialog("open");
 			};
+			self.saveNewBeer = function () {
+			  $("#createDialog").ojDialog("close");
+			};
 			self.confirm = function () {
 			  $("#confirmDialog").ojDialog("close");
 			};
