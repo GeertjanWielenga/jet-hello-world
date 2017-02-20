@@ -2,8 +2,20 @@
     <div class="oj-flex-bar-end"
          data-bind="ojComponent: {component:'ojToolbar'}">
         <button data-bind="click: createNewBeer, ojComponent: {
-                  component:'ojButton', label: 'Add', display: 'icons', 
+                  component:'ojButton', label: 'Add New Beer', display: 'icons', 
                   icons: {start:'demo-icon-font fa fa-plus fa-lg'}
+                }">
+        </button>
+        <button data-bind="click: editSelectedBeer, ojComponent: {
+                  component:'ojButton', label: 'Edit Selected Beer', display: 'icons', 
+                  icons: {start:'demo-icon-font fa fa-edit fa-lg'},
+                  disabled: selectedItem() == -1
+                }">
+        </button>
+        <button data-bind="ojComponent: {
+                  component:'ojButton', label: 'Remove Selected Beer', display: 'icons', 
+                  icons: {start:'demo-icon-font fa fa-minus fa-lg'},
+                  disabled: selectedItem() == -1
                 }">
         </button>
     </div>

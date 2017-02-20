@@ -8,7 +8,7 @@ define([
 		  function mainContentViewModel() {
 			var self = this;
 			self.newBeerItem = ko.observable();
-			self.selectedItem = ko.observable();
+			self.selectedItem = ko.observable(-1);
 			self.selectedImage = ko.observable();
 			self.beerCollection = beerservice.createBeerCollection();
 			self.dataSource = new oj.CollectionTableDataSource(this.beerCollection);
@@ -21,11 +21,14 @@ define([
 						  self.selectedItem(obj.name);
 						  self.selectedImage(obj.image);
 						});
-				$("#confirmDialog").ojDialog("open");
+//				$("#confirmDialog").ojDialog("open");
 			  }
 			};
 			self.createNewBeer = function (event, ui) {
    			  $("#createDialog").ojDialog("open");
+			};
+			self.editSelectedBeer = function (event, ui) {
+   			  $("#confirmDialog").ojDialog("open");
 			};
 			self.saveNewBeer = function () {
 			  self.beerCollection.add(
