@@ -7,6 +7,7 @@ define([
 		function (beerservice, oj, ko, $, app) {
 		  function mainContentViewModel() {
 			var self = this;
+			self.newBeerItem = ko.observable();
 			self.selectedItem = ko.observable();
 			self.selectedImage = ko.observable();
 			self.beerCollection = beerservice.createBeerCollection();
@@ -22,6 +23,9 @@ define([
 						});
 				$("#confirmDialog").ojDialog("open");
 			  }
+			};
+			self.createNewBeer = function (event, ui) {
+				$("#createDialog").ojDialog("open");
 			};
 			self.confirm = function () {
 			  $("#confirmDialog").ojDialog("close");

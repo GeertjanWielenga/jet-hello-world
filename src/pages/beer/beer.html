@@ -1,7 +1,7 @@
 <div class="oj-hybrid-padding">
     <div class="oj-flex-bar-end"
          data-bind="ojComponent: {component:'ojToolbar'}">
-        <button data-bind="ojComponent: {
+        <button data-bind="click: createNewBeer, ojComponent: {
                   component:'ojButton', label: 'Add', display: 'icons', 
                   icons: {start:'demo-icon-font fa fa-plus fa-lg'}
                 }">
@@ -20,6 +20,30 @@
             <h3 data-bind="text: name"></h3>
         </li>
     </script>
+</div>
+<div id="dialogWrapper">
+    <div style="display:none"
+         id="createDialog"
+         title="Enter Beer Name"
+         data-bind="ojComponent:{
+             component: 'ojDialog',
+             initialVisibility: 'hide'}">
+        <div class="oj-dialog-body">
+            <div class="oj-panel">
+                <p>
+                    <input class="oj-inputtext" data-bind="value: newBeerItem" style="border: 0px solid; background-color: transparent;"/>
+                </p>
+                <hr/>
+            </div>
+        </div>
+        <div class="oj-dialog-footer">
+            <button class="oj-button-primary"
+                    data-bind="click: confirm,
+                               ojComponent: {component: 'ojButton',
+                                             label: 'Confirm'}">
+            </button>
+        </div>
+    </div>
 </div>
 <div id="dialogWrapper">
     <div style="display:none"
