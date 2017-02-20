@@ -21,7 +21,6 @@ define([
 						  self.selectedItem(obj.name);
 						  self.selectedImage(obj.image);
 						});
-//				$("#confirmDialog").ojDialog("open");
 			  }
 			};
 			self.createNewBeer = function (event, ui) {
