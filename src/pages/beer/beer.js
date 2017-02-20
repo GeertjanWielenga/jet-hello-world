@@ -26,6 +26,9 @@ define([
 			self.createNewBeer = function (event, ui) {
    			  $("#createDialog").ojDialog("open");
 			};
+			self.deleteSelectedBeer = function (event, ui) {
+   			  self.beerCollection.get(self.selectedItem()).destroy();
+			};
 			self.editSelectedBeer = function (event, ui) {
    			  $("#confirmDialog").ojDialog("open");
 			};

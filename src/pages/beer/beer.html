@@ -12,7 +12,7 @@
                   disabled: selectedItem() == -1
                 }">
         </button>
-        <button data-bind="ojComponent: {
+        <button data-bind="click: deleteSelectedBeer, ojComponent: {
                   component:'ojButton', label: 'Remove Selected Beer', display: 'icons', 
                   icons: {start:'demo-icon-font fa fa-minus fa-lg'},
                   disabled: selectedItem() == -1
