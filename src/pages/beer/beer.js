@@ -25,10 +25,19 @@ define([
 			  }
 			};
 			self.createNewBeer = function (event, ui) {
-				$("#createDialog").ojDialog("open");
+   			  $("#createDialog").ojDialog("open");
 			};
 			self.saveNewBeer = function () {
-			  $("#createDialog").ojDialog("close");
+			  self.beerCollection.add(
+					  {
+						name:'new beer ' + Math.random(),
+						image:'src/css/images/avatar_24px.png'
+					  }, 
+					  { 
+						at:0
+					  }
+					);
+   			  $("#createDialog").ojDialog("close");
 			};
 			self.confirm = function () {
 			  $("#confirmDialog").ojDialog("close");
